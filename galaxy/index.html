@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaGame</title>
+    <style>
+        body {
+        background-color: #333;
+        color: #ccc;
+        font-familiy: sans-serif;
+        }
+        #sidebar {
+        width: 300px;
+        float: left;
+        }
+        #playn-root {
+        width: 600px;
+        height: 800px;
+        float: left;
+        }
+    </style>
+</head>
+<body bgcolor="black">
+<div id="sidebar">
+
+    <p><strong>Galaxien</strong></p>
+
+    <p>Regeln: Zu jedem Kreis gehört ein Gebiet einer eigenen Farbe.
+        Jedes Feld muss dem Gebiet eines Kreises zugeordnet sein und punktsymmetrisch bezüglich diesem Kreis
+        sein.</p>
+
+    <p>Steuerung: Klicke auf das Feld einer Farbe und ziehe den Zeiger über die Felder die eingefärbt werden sollen.
+        Das punktstymmetrisch gespiegelte Feld wird automatisch ebenso eingefärbt.
+        Durch einfaches Klicken kann ein eingefärbtes Feld wieder entfärbt werden.</p>
+
+</div>
+<div id="playn-root"></div>
+<script src="galaxy/galaxy.nocache.js"></script>
+</body>
+</html>

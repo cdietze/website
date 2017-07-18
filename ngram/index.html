@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>n-gram Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+<body ng-controller="NgramController">
+
+  <div class="container-header">
+      <h1><em>n</em>-gram Demo</h1>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2">
+      </div>
+      <div class="span10">
+
+        <h2>Input words</h2>
+        <div class="well">
+          <span class="ngramword" ng-repeat="word in inputWords">{{word}}
+            <span class="remove-word-icon" ng-click="removeWord(word)">&times;</span>
+          </span>
+        </div>
+        <form class="form-inline" ng-submit="addWord()">
+          <span class="input-append">
+            <input type="text" class="input-large" ng-model="wordToAdd" placeholder="Add word...">
+            <input type="submit" class="btn btn-primary" value="Add">
+          </span>
+        </form>
+
+        <h2>Output words</h2>
+        <button class="btn btn-primary" ng-click="updateOutput()"><i class="icon-white icon-refresh"></i> Do it again!</button><br><br>
+        <div class="well">
+          <span class="ngramword" ng-repeat="word in outputWords">
+            {{word}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/jquery-2.0.0.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
